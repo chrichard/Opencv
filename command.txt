@@ -1,6 +1,8 @@
 1、Download dependencies
 sudo apt-get install build-essential libgtk2.0-dev libgtk-3-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev
 
+2 mkdir build under root
+
 2、Build with cuda
 cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.5.4/modules -DWITH_CUDA=1 -DENABLE_FAST_MATH=1 -DCUDA_FAST_MATH=1 -DWITH_CUBLAS=1 -DOPENCV_GENERATE_PKGCONFIG=1 ../opencv-4.5.4
 
