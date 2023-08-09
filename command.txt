@@ -1,3 +1,5 @@
+注意：关闭conda环境
+-------------------------------------------------
 1、Download dependencies
 sudo apt-get install build-essential libgtk2.0-dev libgtk-3-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev
 sudo apt install ffmpeg
