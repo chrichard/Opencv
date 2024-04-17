@@ -4,12 +4,15 @@
 sudo apt-get install build-essential libgtk2.0-dev libgtk-3-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev
 sudo apt install ffmpeg
 
-2 mkdir build under root
+2 在opencv48目录下放opencv和opencv_contrib目录
+  在opencv48目录下 mkdir build
+  以下操作都在build目录中完成
 
 3、Build with cuda
-cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.5.4/modules -DWITH_CUDA=1 -DENABLE_FAST_MATH=1 -DCUDA_FAST_MATH=1 -DWITH_CUBLAS=1 -DOPENCV_GENERATE_PKGCONFIG=1 ../opencv-4.5.4
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -DWITH_CUDA=1 -DENABLE_FAST_MATH=1 -DCUDA_FAST_MATH=1 -DWITH_CUBLAS=1 -DOPENCV_GENERATE_PKGCONFIG=1 ../opencv
 
 4、Build without cuda
-cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.5.4/modules  -DOPENCV_GENERATE_PKGCONFIG=1 ../opencv-4.5.4
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules  -DOPENCV_GENERATE_PKGCONFIG=1 ../opencv
 
-5 make -j8 & sudo make install
+5 make -j8
+6 sudo make install
