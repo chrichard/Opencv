@@ -3,6 +3,8 @@
 1、Download dependencies
 sudo apt-get install build-essential libgtk2.0-dev libgtk-3-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev
 sudo apt install ffmpeg
+sudo apt install libfreetype-dev #opencv显示中文
+
 
 2 在opencv48目录下放opencv和opencv_contrib目录
   在opencv48目录下 mkdir build
